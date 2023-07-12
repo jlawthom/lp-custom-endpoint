@@ -17,7 +17,7 @@ httpsServer.listen(3000, () => console.log('Listening on port 3000'));
 
 const botId = "1234-abc-123-abcd";
 const environment = "draft";
-const convId = "1234-abc-123-abcd";
+const convId = "cac6385e-a97d-460b-b919-6449e71a7643";
 
 app.get(`/v1/bots/${botId}/environments`, (req, res) => {
     console.log("");
