@@ -68,6 +68,12 @@ app.post('/v1/bots/' + botId + '/environments/' + environment + '/conversations/
     const response = {
         "response": [
             {
+                "type": "TEXT",
+                "data": {
+                    "message": "Hi! This is my Custom Endpoint Bot Response..."
+                }
+            },
+            {
                 "type": "STRUCTURED_CONTENT",
                 "data": {
                     "metadata": [{ "type": "ExternalId", "id": "ABCD1234" }],
