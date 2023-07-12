@@ -17,7 +17,7 @@ httpsServer.listen(3000, () => console.log('Listening on port 3000'));
 
 const botId = "1234-abc-123-abcd";
 const environment = "draft";
-const convId = "cac6385e-a97d-460b-b919-6449e71a7643";
+// const convId = "1234-abc-123-abcd";
 
 app.get(`/v1/bots/${botId}/environments`, (req, res) => {
     console.log("");
@@ -46,7 +46,7 @@ app.get(`/v1/bots/${botId}/environments/${environment}/state`, (req, res) => {
     res.json(response);
 });
 
-app.put(`/v1/bots/${botId}/environments/${environment}/conversations/${convId}`, (req, res) => {
+app.put('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:convId', (req, res) => {
     console.log("");
     console.log("Req:");
     console.log(req.body);
@@ -60,7 +60,7 @@ app.put(`/v1/bots/${botId}/environments/${environment}/conversations/${convId}`,
     res.json(response);
 });
 
-app.post(`/v1/bots/${botId}/environments/${environment}/conversations/${convId}/events`, (req, res) => {
+app.post('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:convId/events', (req, res) => {
     console.log("");
     console.log("Req:");
     console.log(req.body);
