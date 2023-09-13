@@ -52,20 +52,6 @@ app.put('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:
     console.log(req.body);
 
     const response = {
-
-    };
-
-    res.statusMessage = "Created";
-    res.status(200);
-    res.json(response);
-});
-
-app.post('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:convId/events', (req, res) => {
-    console.log("");
-    console.log("Req:");
-    console.log(req.body);
-
-    const response = {
         "response": [
             {
                 "type": "TEXT",
@@ -103,6 +89,20 @@ app.post('/v1/bots/' + botId + '/environments/' + environment + '/conversations/
                 }
             ]
         }
+
+    };
+
+    res.statusMessage = "Created";
+    res.status(200);
+    res.json(response);
+});
+
+app.post('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:convId/events', (req, res) => {
+    console.log("");
+    console.log("Req:");
+    console.log(req.body);
+
+    const response = {
     };
 
     res.statusMessage = "Created";
