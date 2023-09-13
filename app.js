@@ -46,7 +46,7 @@ app.get(`/v1/bots/${botId}/environments/${environment}/state`, (req, res) => {
     res.json(response);
 });
 
-app.put('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:convId', (req, res) => {
+app.put('/v1/bots/:botId/environments/' + environment + '/conversations/:convId', (req, res) => {
     console.log("");
     console.log("Req:");
     console.log(req.body);
