@@ -97,7 +97,7 @@ app.put('/v1/bots/:botId/environments/' + environment + '/conversations/:convId'
     res.json(response);
 });
 
-app.post('/v1/bots/' + botId + '/environments/' + environment + '/conversations/:convId/events', (req, res) => {
+app.post('/v1/bots/:botId/environments/' + environment + '/conversations/:convId/events', (req, res) => {
     console.log("");
     console.log("Req:");
     console.log(req.body);
